@@ -369,9 +369,6 @@ curl "http://localhost:5180/api/wado/thumbnail/{seriesInstanceUid}?size=256"
 
 ---
 
-## 未来计划
-
-
 ## 许可证
 
 本项目为专有软件，未经授权禁止使用、复制或分发。
