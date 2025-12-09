@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "新建配置文件",
+    "Projects": [
+      {
+        "Path": "src\\Sinol.DicomViewer\\Sinol.DicomViewer.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "src\\Sinol.PACS.Server\\Sinol.PACS.Server.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

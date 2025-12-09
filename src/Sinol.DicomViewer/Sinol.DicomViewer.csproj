@@ -1,0 +1,47 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net8.0-windows</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<UseWPF>true</UseWPF>
+		<UseWindowsForms>true</UseWindowsForms>
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+		<ApplicationIcon>applicationIcon.ico</ApplicationIcon>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <None Remove="Assets\applicationIcon-1024.png" />
+	  <None Remove="Assets\applicationIcon-256.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Include="applicationIcon.ico" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="fo-dicom" />
+		<PackageReference Include="fo-dicom.Imaging.Desktop" />
+		<PackageReference Include="fo-dicom.Codecs" />
+		<PackageReference Include="CommunityToolkit.Mvvm" />
+		<PackageReference Include="Microsoft.Extensions.Hosting" />
+		<PackageReference Include="QuestPDF" />
+		<PackageReference Include="CsvHelper" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\..\UI\Wpf.Ui.DependencyInjection\Wpf.Ui.DependencyInjection.csproj" />
+	  <ProjectReference Include="..\..\UI\Wpf.Ui.ToastNotifications\Wpf.Ui.ToastNotifications.csproj" />
+	  <ProjectReference Include="..\..\UI\Wpf.Ui.Tray\Wpf.Ui.Tray.csproj" />
+	  <ProjectReference Include="..\..\UI\Wpf.Ui\Wpf.Ui.csproj" />
+	  <ProjectReference Include="..\Sinol.DicomViewer.Core\Sinol.DicomViewer.Core.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Resource Include="Assets\applicationIcon-1024.png" />
+	  <Resource Include="Assets\applicationIcon-256.png" />
+	</ItemGroup>
+
+
+</Project>

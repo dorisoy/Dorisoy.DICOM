@@ -1,0 +1,93 @@
+<Application x:Class="Sinol.DicomViewer.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+             xmlns:helpers="clr-namespace:Sinol.DicomViewer.Helpers"
+             DispatcherUnhandledException="OnDispatcherUnhandledException"
+             Exit="OnExit"
+             Startup="OnStartup">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ui:ThemesDictionary Theme="Dark" />
+                <ui:ControlsDictionary />
+            </ResourceDictionary.MergedDictionaries>
+
+            <!-- 全局转换器 -->
+            <helpers:InverseBooleanConverter x:Key="InverseBooleanConverter" />
+            <helpers:InverseBooleanConverter x:Key="InverseBoolConverter" />
+            <helpers:NullToVisibilityConverter x:Key="NullToVisibilityConverter" />
+            <helpers:BoolToColorConverter x:Key="BoolToColorConverter" />
+            <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+            <BooleanToVisibilityConverter x:Key="BoolToVisibilityConverter" />
+
+            <!-- 定义 RepeatButton 样式（用于轨道） -->
+            <Style x:Key="GreenSliderRepeatButtonStyle"
+                   TargetType="RepeatButton">
+                <Setter Property="Focusable"
+                        Value="False" />
+                <Setter Property="IsTabStop"
+                        Value="False" />
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="RepeatButton">
+                            <Border Background="{TemplateBinding Background}"
+                                    Height="4"
+                                    SnapsToDevicePixels="True" />
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <!-- 定义绿色 Slider 的 ControlTemplate -->
+            <ControlTemplate x:Key="GreenSliderTemplate"
+                             TargetType="Slider">
+                <Grid Margin="{TemplateBinding Margin}">
+                    <Track x:Name="PART_Track">
+                        <!-- 已选区域（左侧/下方） -->
+                        <Track.DecreaseRepeatButton>
+                            <RepeatButton Style="{StaticResource GreenSliderRepeatButtonStyle}"
+                                          Background="#00AA00" />
+                        </Track.DecreaseRepeatButton>
+                        <!-- 未选区域（右侧/上方） -->
+                        <Track.IncreaseRepeatButton>
+                            <RepeatButton Style="{StaticResource GreenSliderRepeatButtonStyle}"
+                                          Background="#E0E0E0" />
+                        </Track.IncreaseRepeatButton>
+                        <!-- 滑块 Thumb -->
+                        <Track.Thumb>
+                            <Thumb Width="16"
+                                   Height="16"
+                                   Background="White"
+                                   BorderBrush="#00AA00"
+                                   BorderThickness="2">
+                                <Thumb.Template>
+                                    <ControlTemplate TargetType="Thumb">
+                                        <Ellipse Fill="{TemplateBinding Background}"
+                                                 Stroke="{TemplateBinding BorderBrush}"
+                                                 StrokeThickness="{TemplateBinding BorderThickness}" />
+                                    </ControlTemplate>
+                                </Thumb.Template>
+                            </Thumb>
+                        </Track.Thumb>
+                    </Track>
+                </Grid>
+            </ControlTemplate>
+
+            <!-- 可选：定义一个带样式的 Slider Style，方便直接使用 -->
+            <Style x:Key="GreenSliderStyle"
+                   TargetType="Slider">
+                <Setter Property="Template"
+                        Value="{StaticResource GreenSliderTemplate}" />
+                <Setter Property="VerticalAlignment"
+                        Value="Bottom" />
+                <Setter Property="Margin"
+                        Value="40,0,40,8" />
+                <!-- 其他默认属性可在此设置 -->
+            </Style>
+
+        </ResourceDictionary>
+
+
+    </Application.Resources>
+</Application>
