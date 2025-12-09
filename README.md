@@ -21,17 +21,17 @@ DICOM Viewer 是一套基于 .NET 8 开发的专业级 DICOM 医学影像解决�
 
 ## 屏幕
 
-<img src="screen/1.png"/>
-<img src="screen/2.png"/>
-<img src="screen/3.png"/>
-<img src="screen/4.png"/>
-<img src="screen/5.png"/>
-<img src="screen/6.png"/>
-<img src="screen/7.png"/>
-<img src="screen/8.png"/>
-<img src="screen/9.png"/>
-<img src="screen/10.png"/>
-<img src="screen/11.png"/>
+<img src="https://github.com/dorisoy/Dorisoy.DICOM/blob/main/Screen/1.png?raw=true"/>
+<img src="https://github.com/dorisoy/Dorisoy.DICOM/blob/main/Screen/2.png?raw=true"/>
+<img src="https://github.com/dorisoy/Dorisoy.DICOM/blob/main/Screen/3.png?raw=true"/>
+<img src="https://github.com/dorisoy/Dorisoy.DICOM/blob/main/Screen/4.png?raw=true"/>
+<img src="https://github.com/dorisoy/Dorisoy.DICOM/blob/main/Screen/5.png?raw=true"/>
+<img src="https://github.com/dorisoy/Dorisoy.DICOM/blob/main/Screen/6.png?raw=true"/>
+<img src="https://github.com/dorisoy/Dorisoy.DICOM/blob/main/Screen/7.png?raw=true"/>
+<img src="https://github.com/dorisoy/Dorisoy.DICOM/blob/main/Screen/8.png?raw=true"/>
+<img src="https://github.com/dorisoy/Dorisoy.DICOM/blob/main/Screen/9.png?raw=true"/>
+<img src="https://github.com/dorisoy/Dorisoy.DICOM/blob/main/Screen/10.png?raw=true"/>
+<img src="https://github.com/dorisoy/Dorisoy.DICOM/blob/main/Screen/11.png?raw=true"/>
 
 ## 系统架构
 
@@ -380,4 +380,4 @@ curl "http://localhost:5180/api/wado/thumbnail/{seriesInstanceUid}?size=256"
 
 ## 联系方式
 
-<img src="screen/wx.jpg">
+<img src="https://github.com/dorisoy/Dorisoy.DICOM/blob/main/Screen/wx.jpg?raw=true"/>
