@@ -35,41 +35,7 @@ DICOM Viewer 是一套基于 .NET 8 开发的专业级 DICOM 医学影像解决�
 
 ## 系统架构
 
-```
-┌───────────────────────────────────────────────────────────────┐
-│                         Sinol DICOM Platform                       │
-├───────────────────────────────┬───────────────────────────────┤
-│    Sinol.DicomViewer           │      Sinol.PACS.Server         │
-│    (WPF 桌面应用)               │      (Web API 服务器)            │
-│                               │                               │
-│  ┌─────────────────────────┐  │  ┌─────────────────────────┐  │
-│  │  Views/Pages         │  │  │  REST API Controllers  │  │
-│  │  - MainPage          │  │  │  - Patients            │  │
-│  │  - MprWindow         │  │  │  - Studies             │  │
-│  │  - PacsQueryWindow   │  │  │  - Series/Instances    │  │
-│  │  - SettingsPage      │  │  │  - WADO (Image Access) │  │
-│  └─────────────────────────┘  │  └─────────────────────────┘  │
-│  ┌─────────────────────────┐  │  ┌─────────────────────────┐  │
-│  │  Services             │  │  │  Services              │  │
-│  │  - DicomRendering    │  │  │  - DicomIndexService   │  │
-│  │  - MprService        │  │  │  - DicomImageService   │  │
-│  │  - PacsApiService    │  │  └─────────────────────────┘  │
-│  └─────────────────────────┘  │                               │
-└─────────────┬─────────────────┴───────────────────────────────┘
-              │
-              ▼
-┌───────────────────────────────────────────────────────────────┐
-│                   Sinol.DicomViewer.Core                         │
-│                     (共享核心库)                                   │
-│                                                                   │
-│  ┌───────────────┐  ┌───────────────┐  ┌───────────────┐  ┌───────────┐  │
-│  │  Data Models  │  │  Services     │  │  Repositories │  │  Database │  │
-│  │  - Patient    │  │  - DicomLoader│  │  - Patient    │  │  - SQLite │  │
-│  │  - Study      │  │  - PacsService│  │  - Report     │  │  - MySQL  │  │
-│  │  - Series     │  │  - ReportSvc  │  │  - Exam       │  │  - MSSQL  │  │
-│  └───────────────┘  └───────────────┘  └───────────────┘  └───────────┘  │
-└───────────────────────────────────────────────────────────────┘
-```
+<img src="https://github.com/dorisoy/Dorisoy.DICOM/blob/main/Screen/arc.png?raw=true"/>
 
 ---
 
