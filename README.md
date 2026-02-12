@@ -17,6 +17,8 @@
 
 DICOM Viewer 是一套基于 .NET 8 开发的专业级 DICOM 医学影像解决方案，包含桌面影像查看器和 Web API 服务器两大核心组件。支持 CT、MRI、US 等多种模态的 DICOM 图像加载、浏览、测量和导出，并提供完整的 PACS 集成能力和远程影像管理功能。
 
+商业版下载地址：[https://shop.unitos.cn/item/4](https://shop.unitos.cn/item/4)
+
 ---
 
 ## 屏幕
