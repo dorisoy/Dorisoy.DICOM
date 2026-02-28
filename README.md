@@ -1,4 +1,4 @@
-# Sinol DICOM Viewer
+# Dorisoy DICOM Viewer
 
 <div align="center">
 
