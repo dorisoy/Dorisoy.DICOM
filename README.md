@@ -46,12 +46,12 @@ DICOM Viewer 是一套基于 .NET 8 开发的专业级 DICOM 医学影像解决�
 ### 📁 项目结构
 
 ```
-Sinol.DicomViewer/
-├── Sinol.DicomViewer.sln              # 主解决方案文件
+Dorisoy.DicomViewer/
+├── Dorisoy.DicomViewer.sln              # 主解决方案文件
 ├── src/
-│   ├── Sinol.DicomViewer/              # WPF 桌面应用程序
-│   ├── Sinol.DicomViewer.Core/         # 共享核心库
-│   └── Sinol.PACS.Server/              # Web API 服务器
+│   ├── Dorisoy.DicomViewer/              # WPF 桌面应用程序
+│   ├── Dorisoy.DicomViewer.Core/         # 共享核心库
+│   └── Dorisoy.PACS.Server/              # Web API 服务器
 ├── UI/
 │   ├── Wpf.Ui/                         # WPF UI 控件库
 │   ├── Wpf.Ui.Abstractions/            # UI 抽象层
@@ -61,7 +61,7 @@ Sinol.DicomViewer/
 
 ---
 
-## 🖥️ Sinol.DicomViewer (桌面应用)
+## 🖥️ Dorisoy.DicomViewer (桌面应用)
 
 **技术栈**: .NET 8 | WPF | MVVM | Wpf.Ui | fo-dicom
 
@@ -101,7 +101,7 @@ Sinol.DicomViewer/
 ### 目录结构
 
 ```
-Sinol.DicomViewer/
+Dorisoy.DicomViewer/
 ├── Views/                      # 视图层
 │   ├── MainWindow.xaml          # 主窗口
 │   ├── PacsQueryWindow.xaml     # PACS 查询窗口
@@ -125,7 +125,7 @@ Sinol.DicomViewer/
 
 ---
 
-## 🌐 Sinol.PACS.Server (Web API)
+## 🌐 Dorisoy.PACS.Server (Web API)
 
 **技术栈**: .NET 8 | ASP.NET Core | fo-dicom | SixLabors.ImageSharp
 
@@ -163,7 +163,7 @@ Sinol.DicomViewer/
 ### 目录结构
 
 ```
-Sinol.PACS.Server/
+Dorisoy.PACS.Server/
 ├── Controllers/                # API 控制器
 │   ├── PatientsController.cs   # 患者 API
 │   ├── StudiesController.cs    # 检查 API
@@ -191,7 +191,7 @@ Sinol.PACS.Server/
 
 ---
 
-## 📦 Sinol.DicomViewer.Core (核心库)
+## 📦 Dorisoy.DicomViewer.Core (核心库)
 
 **技术栈**: .NET 8 | fo-dicom | Dapper | 多数据库支持
 
@@ -243,19 +243,19 @@ Sinol.PACS.Server/
 ```bash
 # 1. 克隆仓库
 git clone <repository-url>
-cd Sinol.DicomViewer
+cd Dorisoy.DicomViewer
 
 # 2. 恢复依赖
 dotnet restore
 
 # 3. 启动 PACS Web API 服务器
-cd src/Sinol.PACS.Server
+cd src/Dorisoy.PACS.Server
 dotnet run
 # 服务器将在 http://localhost:5180 启动
 # Swagger 文档: http://localhost:5180/swagger
 
 # 4. 启动桌面应用 (新终端)
-cd src/Sinol.DicomViewer
+cd src/Dorisoy.DicomViewer
 dotnet run
 ```
 
@@ -267,7 +267,7 @@ dotnet run
 2. **PACS 远程查询**
    - 菜单 → PACS 查询
    - 选择服务器类型:
-     - **Sinol PACS Web API** - 本地 Web API 服务器
+     - **Dorisoy PACS Web API** - 本地 Web API 服务器
      - **DICOM 服务器** - 标准 PACS (C-FIND/C-MOVE)
    - 点击"测试连接"验证服务器状态
    - 输入查询条件并点击"查询"
